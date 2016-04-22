@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.GaussianBlur;
+import javafx.scene.effect.Shadow;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.CycleMethod;
@@ -28,6 +29,7 @@ import static javafx.scene.paint.Color.BLACK;
 import static javafx.scene.paint.Color.WHITE;
 
 /**
+ * YinYang Symbol
  * Created by XIE_XIAO on 4/21/2016.
  */
 public class yinyangtaiji extends Application {
@@ -71,16 +73,18 @@ public class yinyangtaiji extends Application {
 
         Rectangle blackRec = new Rectangle( canvas.getWidth(), canvas.getHeight() );
         blackRec.setFill( Color.BLACK );
-        blackRec.setEffect( new GaussianBlur() );
+        blackRec.setEffect(new Shadow());
 
         Rectangle whiteRec = new Rectangle( 580, 550 );
         whiteRec.setFill( Color.WHITE );
         whiteRec.setX( 23 );
         whiteRec.setY( 24 );
-        whiteRec.setEffect( new GaussianBlur() );
+        whiteRec.setEffect(new GaussianBlur());
+
+//        whiteRec.setEffect( new GaussianBlur() );
 
 
-        Circle circle = new Circle( 320, 305, 165 );
+        Circle circle = new Circle(313, 305, 165);
         circle.setFill( Color.web( "white",0.8 ) );
         circle.setStrokeType( StrokeType.OUTSIDE );
         circle.setStroke(Color.web( "black",0.8 ));
@@ -154,21 +158,21 @@ public class yinyangtaiji extends Application {
 
 
         gc.setFill(WHITE);
-        gc.fillArc( 170, 155, 300, 300, 90, 180, ArcType.OPEN );
+        gc.fillArc(163, 155, 300, 300, 90, 180, ArcType.OPEN);
 
         gc.setFill(BLACK);
-        gc.fillArc( 170, 155, 300, 300, 270, 180, ArcType.OPEN );
+        gc.fillArc(163, 155, 300, 300, 270, 180, ArcType.OPEN);
 
-        gc.fillArc( 245, 305, 150, 150, 90, 180, ArcType.OPEN );
+        gc.fillArc(238, 305, 150, 150, 90, 180, ArcType.OPEN);
 
         gc.setFill(WHITE);
-        gc.fillArc( 245, 155, 150, 150, 270, 180, ArcType.OPEN );
+        gc.fillArc(238, 155, 150, 150, 270, 180, ArcType.OPEN);
         gc.setFill(Color.web( "white",0.95 ));
 
 
-        gc.fillOval( 305, 355, 40, 40 );
+        gc.fillOval(298, 355, 40, 40);
         gc.setFill(BLACK);
-        gc.fillOval( 305, 205, 40, 40 );
+        gc.fillOval(298, 205, 40, 40);
 
         root.getChildren().add( blackRec );
         root.getChildren().add( whiteRec );
@@ -180,5 +184,9 @@ public class yinyangtaiji extends Application {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void handle(MouseEvent event) {
+
     }
 }
