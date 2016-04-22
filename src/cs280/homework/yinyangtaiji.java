@@ -24,6 +24,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import static javafx.scene.paint.Color.BLACK;
+import static javafx.scene.paint.Color.WHITE;
+
 /**
  * Created by XIE_XIAO on 4/21/2016.
  */
@@ -72,7 +75,7 @@ public class yinyangtaiji extends Application {
         yin.setX( 5 );
         yin.setY( 100 );
         yin.setFont( Font.font("汉仪雪君体繁", FontWeight.BOLD,80 ));
-        yin.setFill( Color.WHITE );
+        yin.setFill( WHITE );
         yin.setStrokeType( StrokeType.OUTSIDE );
         yin.setStroke(Color.web( "black",0.70 ));
         yin.setStrokeWidth(5);
@@ -80,7 +83,7 @@ public class yinyangtaiji extends Application {
         yang.setX( 5 );
         yang.setY( 200 );
         yang.setFont( Font.font("汉仪雪君体繁", FontWeight.BOLD,80 ));
-        yang.setFill( Color.WHITE );
+        yang.setFill( WHITE );
         yang.setStrokeType( StrokeType.OUTSIDE );
         yang.setStroke(Color.web( "black",0.70 ));
         yang.setStrokeWidth(5);
@@ -88,7 +91,7 @@ public class yinyangtaiji extends Application {
         liang.setX( 5 );
         liang.setY( 300 );
         liang.setFont( Font.font("汉仪雪君体繁", FontWeight.BOLD,80 ));
-        liang.setFill( Color.WHITE );
+        liang.setFill( WHITE );
         liang.setStrokeType( StrokeType.OUTSIDE );
         liang.setStroke(Color.web( "black",0.70 ));
         liang.setStrokeWidth(5);
@@ -96,7 +99,7 @@ public class yinyangtaiji extends Application {
         yi.setX( 5 );
         yi.setY( 400 );
         yi.setFont( Font.font("汉仪雪君体繁", FontWeight.BOLD,80 ));
-        yi.setFill( Color.WHITE );
+        yi.setFill( WHITE );
         yi.setStrokeType( StrokeType.OUTSIDE );
         yi.setStroke(Color.web( "black",0.70 ));
         yi.setStrokeWidth(5);
@@ -104,7 +107,7 @@ public class yinyangtaiji extends Application {
         dao.setX( 440 );
         dao.setY( 100 );
         dao.setFont( Font.font("汉仪雪君体繁", FontWeight.BOLD,80 ));
-        dao.setFill( Color.WHITE );
+        dao.setFill( WHITE );
         dao.setStrokeType( StrokeType.OUTSIDE );
         dao.setStroke(Color.web( "black",0.70 ));
         dao.setStrokeWidth(5);
@@ -112,7 +115,7 @@ public class yinyangtaiji extends Application {
         wu.setX( 440 );
         wu.setY( 200 );
         wu.setFont( Font.font("汉仪雪君体繁", FontWeight.BOLD,80 ));
-        wu.setFill( Color.WHITE );
+        wu.setFill( WHITE );
         wu.setStrokeType( StrokeType.OUTSIDE );
         wu.setStroke(Color.web( "black",0.70 ));
         wu.setStrokeWidth(5);
@@ -120,7 +123,7 @@ public class yinyangtaiji extends Application {
         ji.setX( 440 );
         ji.setY( 300 );
         ji.setFont( Font.font("汉仪雪君体繁", FontWeight.BOLD,80 ));
-        ji.setFill( Color.WHITE );
+        ji.setFill( WHITE );
         ji.setStrokeType( StrokeType.OUTSIDE );
         ji.setStroke(Color.web( "black",0.70 ));
         ji.setStrokeWidth(5);
@@ -128,20 +131,26 @@ public class yinyangtaiji extends Application {
         xian.setX( 440 );
         xian.setY( 400 );
         xian.setFont( Font.font("汉仪雪君体繁", FontWeight.BOLD,80 ));
-        xian.setFill( Color.WHITE );
+        xian.setFill( WHITE );
         xian.setStrokeType( StrokeType.OUTSIDE );
         xian.setStroke(Color.web( "black",0.70 ));
         xian.setStrokeWidth(5);
-        gc.setFill(Color.web( "white",0.85 ));
+
+        gc.setFill(WHITE);
         gc.fillArc(115,100,300,300,90,180, ArcType.OPEN);
-        gc.setFill(Color.web( "black",0.85 ));
+
+        gc.setFill(BLACK);
         gc.fillArc(115, 100, 300, 300, 270, 180, ArcType.OPEN);
+
         gc.fillArc(190,250,150,150,90,180,ArcType.OPEN);
-        gc.setFill(Color.web( "white" ));
+
+        gc.setFill(WHITE);
         gc.fillArc(190, 100, 150, 150, 270, 180, ArcType.OPEN);
         gc.setFill(Color.web( "white",0.95 ));
+
+
         gc.fillOval(250,300,40,40);
-        gc.setFill(Color.web( "black",0.85 ));
+        gc.setFill(BLACK);
         gc.fillOval(250, 150, 40, 40);
 
         root.getChildren().add(colors);
